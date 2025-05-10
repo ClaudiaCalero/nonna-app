@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'register_screen.dart';
-import 'forgot_password_page.dart';
 import 'home_screen.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -12,7 +11,7 @@ class LoginScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Image.asset('assets/logo.png'),
+            Image.asset('assets/logo.png'), // Logo de la app
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: TextField(
@@ -46,17 +45,6 @@ class LoginScreen extends StatelessWidget {
                 );
               },
               child: Text('¿No tienes cuenta? Regístrate'),
-            ),
-            TextButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => ForgotPasswordPage(),
-                  ),
-                );
-              },
-              child: Text('¿Olvidaste tu contraseña?'),
             ),
           ],
         ),

@@ -7,5 +7,11 @@ class User {
   final String telefono;
 
   User({
-    required this.id, required this.nombre, required this.primerApellido, required this.segundoApellido, required this.email, required this.telefono });
+    required this.id,
+    required this.nombre,
+    required this.primerApellido,
+    required this.segundoApellido,
+    required this.email,
+    required this.telefono,
+  });
 }

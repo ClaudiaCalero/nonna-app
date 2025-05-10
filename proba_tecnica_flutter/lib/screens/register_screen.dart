@@ -15,9 +15,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
   final emailController = TextEditingController();
   final telefonoController = TextEditingController();
 
-  void _registerUser() {
+  void _registerUser () {
     if (_formKey.currentState!.validate()) {
-      final newUser = User(
+      final newUser  = User(
         id: DateTime.now().millisecondsSinceEpoch.toString(),
         nombre: nombreController.text,
         primerApellido: primerApellidoController.text,
@@ -26,7 +26,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
         telefono: telefonoController.text,
       );
 
-      print('Usuario registrado: ${newUser.nombre} ${newUser.email}');
+      print('Usuario registrado: ${newUser .nombre} ${newUser .email}');
 
       Navigator.pop(context);
     }
@@ -66,7 +66,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 controller: telefonoController,
                 decoration: InputDecoration(labelText: 'Teléfono'),
                 validator: (value) => value!.isEmpty ? 'Introduce tu teléfono' : null,
-
               ),
               SizedBox(height: 20),
               ElevatedButton(
